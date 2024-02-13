@@ -1,0 +1,30 @@
+Authentication
+Login: POST /login/
+
+Description: Authenticates a user.
+Payload: {"email": "user@example.com", "password": "password123"}
+Signup: POST /signup/
+
+1. Description: Registers a new user.
+Payload: {"email": "newuser@example.com", "password": "password123", ...}
+Password Reset Request: POST /forget-password/
+
+2. Description: Initiates a password reset process.
+Payload: {"email": "user@example.com"}
+Password Reset: POST /reset-password/
+
+3. Description: Completes the password reset process.
+Payload: {"token": "reset_token", "new_password": "newpassword123"}
+Product Management
+List Products: GET /api/product-list/
+
+4. Description: Retrieves a list of products associated with the logged-in user.
+Create Product: POST /api/product-create/
+
+5. Description: Creates a new product.
+Payload: {"name": "Product Name", "category": "Category", ...}
+Logout: POST /api/logout/
+
+6. Description: Logs out the current user.
+Usage Instructions
+To consume these endpoints, use an HTTP client like curl or Postman. Set the appropriate HTTP method (GET, POST), provide the necessary payload in JSON format for POST requests, and include a Content-Type: application/json header.
