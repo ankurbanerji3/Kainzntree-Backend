@@ -1,0 +1,20 @@
+***Instructions for running the application on local machine***
+
+1. You should have mysql workbench or XAMPP server configured. If not, then I would recommend using XAMPP server's MySQL database.
+2. If you don't have XAMPP, simply download the appropriate installer from "https://www.apachefriends.org/". After that, install the application and set the "path" in user environment variable to the bin folder of mysql in the XAMPP directory on your PC.
+
+3. Start Apache server followed by the MySQL server in XAMPP and open the phpMyAdmin by clicking on the "Admin" tab for MySQL. The first thing is to create a database "newdb" either directly on phpMyAdmin or using terminal.
+
+4. Once its done, install the required libraries from requirements.txt.
+
+5. Open terminal from the directory of the project and run these two commands --
+
+	python manage.py makemigrations
+
+	python manage.py migrate
+
+6. After successfull migrations, run the command below to start the application --
+
+	python manage.py runserver
+
+7. Simply follow through the user interface and perform the necessary actions.
