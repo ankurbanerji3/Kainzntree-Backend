@@ -1,0 +1,39 @@
+<!-- templates/product_form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Product</title>
+    <!-- Add any additional CSS files you need -->
+</head>
+<body>
+    <h1>Add New Product</h1>
+    <form method="post" action="{% url 'api:product-create' %}">
+        {% csrf_token %}
+        
+        <label for="user_email">User Email:</label><br>
+        <input type="email" id="user_email" name="user_email" value="{{ user_email }}" readonly><br><br>
+
+        <label for="SKU">SKU:</label><br>
+        <input type="text" id="SKU" name="SKU" required><br><br>
+
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="category">Category:</label><br>
+        <input type="text" id="category" name="category" required><br><br>
+
+        <label for="in_stock">In Stock:</label><br>
+        <input type="checkbox" id="in_stock" name="in_stock"><br><br>
+
+        <label for="available_stock">Available Stock:</label><br>
+        <input type="number" id="available_stock" name="available_stock" required><br><br>
+
+        <label for="tags">Tags:</label><br>
+        <input type="text" id="tags" name="tags" required><br><br>
+
+        <input type="submit" value="Create Product">
+    </form>
+</body>
+</html>
